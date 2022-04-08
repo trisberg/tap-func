@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.springdeveloper.func</groupId>
-	<artifactId>tap-func</artifactId>
+	<artifactId>tap-java-func</artifactId>
 	<version>0.0.1</version>
-	<name>tap-func</name>
+	<name>tap-java-func</name>
 	<description>Function which will hire a person</description>
 	<properties>
 		<java.version>11</java.version>

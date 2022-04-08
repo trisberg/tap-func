@@ -9,9 +9,9 @@
 
 You can build your function using our provided builder, which already includes buildpacks and an invoker layer:
 ```
-pack build tap-func --path . --builder ghcr.io/vmware-tanzu/function-buildpacks-for-knative/functions-builder:0.0.9
+pack build tap-java-func --path . --builder ghcr.io/vmware-tanzu/function-buildpacks-for-knative/functions-builder:0.0.9
 ```
-Where `tap-func` is the name of your runnable function image, later used by Docker.
+Where `tap-java-func` is the name of your runnable function image, later used by Docker.
 
 ## Local Deployment
 
@@ -22,7 +22,7 @@ This assumes you have Docker Desktop properly installed and running.
 With Docker Desktop running, authenticated, and the ports (default `8080`) available:
 
 ```
-docker run -it --rm -p 8080:8080 tap-func
+docker run -it --rm -p 8080:8080 tap-java-func
 ```
 ## Testing
 
@@ -83,9 +83,9 @@ tanzu apps workload apply -f config/workload.yaml
 If you would like deploy the code from your local working directory you can use the following command:
 
 ```
-tanzu apps workload create tap-func -f config/workload.yaml \
+tanzu apps workload create tap-java-func -f config/workload.yaml \
   --local-path . \
-  --source-image <REPOSITORY-PREFIX>/tap-func-source \
+  --source-image <REPOSITORY-PREFIX>/tap-java-func-source \
   --type web
 ```
 
@@ -94,7 +94,7 @@ tanzu apps workload create tap-func -f config/workload.yaml \
 Determine the URL to use for the accessing the app by running:
 
 ```
-tanzu apps workload get tap-func
+tanzu apps workload get tap-java-func
 ```
 
 To access the deployed app open the URL shown in your browser.
